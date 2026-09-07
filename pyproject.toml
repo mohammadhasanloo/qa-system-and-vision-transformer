@@ -1,0 +1,22 @@
+[project]
+name = "qa-system-and-vision-transformer"
+version = "1.0.0"
+description = "Persian extractive question answering, and CIFAR-10 classification with DeiT against VGG19"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "timm>=1.0",
+    "torch>=2.0",
+    "torchvision>=0.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["qa_system*", "vision*"]
